@@ -1,0 +1,12 @@
+@font-face {
+	font-family: "Genshin";
+	src: url(asset/zh-cn.ttf);
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+}
+
