@@ -3,10 +3,73 @@
 	src: url(asset/zh-cn.ttf);
 }
 
+@font-face {
+	font-family: "Genshin Impact";
+	src: url(asset/Genshin\ Impact\ DRIP\ FONT.ttf);
+}
+
 *,
 *::before,
 *::after {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
+.container {
+	display: flex;
+	flex-direction: column;
+}
+
+.background-container {
+	position: relative;
+}
+
+.background-container .background * {
+	filter: brightness(50%);
+	display: block;
+	max-width: 100%;
+}
+
+.title {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.title img {
+	height: 75%;
+}
+
+.title h1 {
+	width: min-content;
+	color: white;
+	font-family: "Genshin Impact";
+	font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+@media (min-width: 1024px) {
+	.container {
+		flex-direction: row;
+	}
+
+	.background-container .background img {
+		min-height: 100vh;
+		max-width: 40vw;
+		filter: none;
+	}
+
+	.title {
+		margin-top: 200px;
+		height: fit-content;
+		background-color: hsla(0, 0%, 0%, 0.7);
+	}
+
+	.title img {
+		width: 35%;
+		height: auto;
+	}
+}

@@ -7,36 +7,41 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<sidebar>
-			<div class="background-container">
-				<div class="title">
-					<img src="" alt="" />
-					<h1>Dawn Winery</h1>
+		<div class="container">
+			<sidebar>
+				<div class="background-container">
+					<picture class="background">
+						<source media="(min-width: 1024px)" srcset="asset/desktop-dawn-winery.jpg" />
+						<img src="asset/mobile-dawn-winery.jpg" alt="" />
+					</picture>
+					<div class="title">
+						<img src="asset/dawn-winery-logo.png" alt="" />
+						<h1>Dawn Winery</h1>
+					</div>
 				</div>
-				<p class="attribution">Photo<a href="">By</a> On<a href="">From here</a></p>
-			</div>
-		</sidebar>
-		<main>
-			<div>
-				<p>
-					This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now
-					to get started.
-				</p>
-				<p>You know you want to.</p>
-			</div>
-			<form action="">
-				<div class="form-container">
-					<h2>Let's do this!</h2>
-					<label for="first-name">FIRST NAME</label>
-					<input type="text" name="first-name" id="first-name" required />
-					<label for="last-name">LAST NAME</label>
-					<input type="text" name="last-name" id="last-name" required />
-					<label for="password">PASSWORD</label>
-					<input type="password" name="password" id="password" />
+			</sidebar>
+			<main>
+				<div>
+					<p>
+						This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now
+						to get started.
+					</p>
+					<p>You know you want to.</p>
 				</div>
-				<button>Create Account</button>
-			</form>
-			<p>Already have an account? Log in</p>
-		</main>
+				<form action="">
+					<div class="form-container">
+						<h2>Let's do this!</h2>
+						<label for="first-name">FIRST NAME</label>
+						<input type="text" name="first-name" id="first-name" required />
+						<label for="last-name">LAST NAME</label>
+						<input type="text" name="last-name" id="last-name" required />
+						<label for="password">PASSWORD</label>
+						<input type="password" name="password" id="password" />
+					</div>
+					<button>Create Account</button>
+				</form>
+				<p>Already have an account? Log in</p>
+			</main>
+		</div>
 	</body>
 </html>
