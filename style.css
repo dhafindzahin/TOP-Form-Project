@@ -87,6 +87,11 @@ body {
 	color: #2f2f3f;
 }
 
+.form-container > div {
+	display: flex;
+	flex-direction: column;
+}
+
 .form-container h2 {
 	font-size: 1.1rem;
 	margin-bottom: 8px;
@@ -97,7 +102,6 @@ body {
 	display: flex;
 	gap: 24px;
 	flex-wrap: wrap;
-	justify-content: center;
 	width: 100%;
 }
 
@@ -116,6 +120,7 @@ body {
 .form-container input {
 	border: hsla(0, 0%, 50%, 0.25) solid 1px;
 	border-radius: 3px;
+	min-height: 2em;
 }
 
 .container-submit {
@@ -134,7 +139,7 @@ body {
 }
 
 .container-submit p {
-	font-size: .75rem;
+	font-size: 0.75rem;
 }
 
 .container-submit a {
@@ -172,5 +177,13 @@ body {
 	.title img {
 		width: 35%;
 		height: auto;
+	}
+
+	.form-container > div {
+		max-width: 75%;
+	}
+
+	.form-container input {
+		max-width: 80%;
 	}
 }
