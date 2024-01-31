@@ -90,11 +90,13 @@ body {
 .form-container > div {
 	display: flex;
 	flex-direction: column;
+	min-width: 100%;
 }
 
 .form-container h2 {
 	font-size: 1.1rem;
 	margin-bottom: 8px;
+	text-align: center;
 }
 
 .form-container ul {
@@ -102,7 +104,6 @@ body {
 	display: flex;
 	gap: 24px;
 	flex-wrap: wrap;
-	width: 100%;
 }
 
 .form-container li {
@@ -115,12 +116,23 @@ body {
 
 .form-container label {
 	font-size: 0.7rem;
+	letter-spacing: 0.05em;
 }
 
 .form-container input {
-	border: hsla(0, 0%, 50%, 0.25) solid 1px;
+	border: hsla(0, 0%, 50%, 0.25) solid 0.1px;
 	border-radius: 3px;
 	min-height: 2em;
+	padding: 0.5em;
+}
+
+.form-container input:user-invalid {
+	border-color: red;
+}
+
+.form-container input:focus {
+	border-color: blue;
+	outline: none;
 }
 
 .container-submit {
@@ -128,14 +140,20 @@ body {
 	margin-left: 32px;
 }
 
-.container-submit button {
+.btn-submit {
 	color: white;
-	margin-bottom: 32px;
+	margin-bottom: 16px;
 	padding: 1em 3.5em;
 	background-color: #596d48;
 	border: none;
 	border-radius: 6px;
 	cursor: pointer;
+}
+
+.btn-submit:hover,
+.btn-submit:active,
+.btn-submit:focus {
+	background-color: hsl(92, 20%, 50%);
 }
 
 .container-submit p {
@@ -145,6 +163,12 @@ body {
 .container-submit a {
 	text-decoration: none;
 	color: black;
+}
+
+.invalid {
+	display: none;
+	color: red;
+	font-size: 0.5rem;
 }
 
 @media (min-width: 768px) {
@@ -179,11 +203,19 @@ body {
 		height: auto;
 	}
 
+	.form-container h2 {
+		text-align: start;
+	}
+
 	.form-container > div {
 		max-width: 75%;
 	}
 
+	.form-container ul {
+		max-width: none;
+	}
+
 	.form-container input {
-		max-width: 80%;
+		max-width: calc(75% - 1vh);
 	}
 }

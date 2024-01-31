@@ -37,26 +37,32 @@
 								<li>
 									<label for="first-name">FIRST NAME</label>
 									<input type="text" name="first-name" id="first-name" required />
+									<p class="invalid">*First Name is required</p>
 								</li>
 								<li>
 									<label for="last-name">LAST NAME</label>
 									<input type="text" name="last-name" id="last-name" required />
+									<p class="invalid">*Last Name is required</p>
 								</li>
 								<li>
 									<label for="email">EMAIL</label>
-									<input type="text" name="email" id="email" required />
+									<input type="email" name="email" id="email" required />
+									<p class="invalid">*Email is required</p>
 								</li>
 								<li>
 									<label for="phone-number">PHONE NUMBER</label>
-									<input type="text" name="phone-number" id="phone-number" required />
+									<input type="tel" name="phone-number" id="phone-number" required />
+									<p class="invalid">*Phone Number is required</p>
 								</li>
 								<li>
 									<label for="password">PASSWORD</label>
-									<input type="text" name="password" id="password" required />
+									<input type="password" name="password" id="password" required />
+									<p class="invalid">*Password is required</p>
 								</li>
 								<li>
 									<label for="confirm-password">CONFIRM PASSWORD</label>
-									<input type="text" name="confirm-password" id="confirm-password" required />
+									<input type="password" name="confirm-password" id="confirm-password" required />
+									<p class="invalid" id="invalid-password"></p>
 								</li>
 							</ul>
 						</div>
@@ -69,4 +75,5 @@
 			</main>
 		</div>
 	</body>
+	<script src="script.js"></script>
 </html>
